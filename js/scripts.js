@@ -8,6 +8,11 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
 
 // Funções
+const saveTodo = (text) => {
+
+    const todo = document.createElement()
+}
+
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -15,9 +20,11 @@ todoForm.addEventListener("submit", (e) => {
 
    const inputValue = todoInput.value;
 
+    // Vai Pegar o valor do input
    if(inputValue){
-    console.log(inputValue);
+    //console.log(inputValue);
     // save todo
+    saveTodo(inputValue)
    }
 })
 
