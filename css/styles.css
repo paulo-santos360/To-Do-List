@@ -88,3 +88,14 @@ select{
 #cancel-edit-btn{
     margin-top: 1rem;
 }
+
+/* Todo toolbar*/
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom: 0.5rem;
+}
