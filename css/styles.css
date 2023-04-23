@@ -25,3 +25,36 @@ button{
     align-items: center;
     transition: 0.4s;
 }
+
+button:hover{
+    background-color: #102F5e;
+    color: #fff;
+}
+
+button:hover > i {
+    color: #fff;
+}
+
+button i {
+    color: #102F5e;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input,
+select{
+    padding: 0.25rem 0.5rem;
+}
+
+.hide{
+    display: none;
+}
+
+/* Todo header */
+.todo-container{
+    max-width: 450px;
+    margin: 3rem auto 0;
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
