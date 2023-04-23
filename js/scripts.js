@@ -10,8 +10,18 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 // Funções
 const saveTodo = (text) => {
 
-    const todo = document.createElement()
-}
+    const todo = document.createElement("div");
+    todo.classList.add("todo");
+
+    const todoTitle = document.createElement("h3");
+    todoList.innerText = text;
+    todo.appendChild(todoTitle);
+
+   // console.log(todo);
+
+   const doneBtn = document.createElement("button")
+   doneBtn.classList.add("finish-todo")
+};
 
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
