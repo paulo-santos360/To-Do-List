@@ -6,6 +6,7 @@ const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
+let oldInputValue;
 
 // Funções
 const saveTodo = (text) => {
@@ -41,12 +42,25 @@ const saveTodo = (text) => {
    todoInput.focus();  
 };
 
+const updateTodo = (text) => {
 
+    const todos = document.querySelectorAll(".todo")
 
+    todos.forEach((todo) => {
 
+        let todoTitle = todo.querySelector("h3")
 
+        if(todoTitle.innerText === oldInputValue) {
+            todoTitle.innerText = text
+        }
+    });
+};
 
-
+const toggleForms = () => {
+    editForm.classList.toggle("hide");
+    todoForm.classList.toggle("hide");
+    todoList.classList.toggle("hide");
+};
 
 // Eventos
 todoForm.addEventListener("submit", (e) => {
@@ -81,54 +95,18 @@ document.addEventListener("click", (e) => {
 
     if(targetEl.classList.contains("remove-todo")){
         parentEl.remove();
+        //removve o elemento pai
     }
 
     if(targetEl.classList.contains("edit-todo")){
-        ///toggleForms();
-        console.log("Editou")
+        toggleForms();
+        //console.log("Editou")
 
        editInput.value = todoTitle;
        oldInputValue = todoTitle;
        //Salvando a Variavel pra depois fazer alteração
     }
 })
-
-
-
-
-
-
-
-
-/* let oldInputValue;
-
-
-
-
-
-const toggleForms = () => {
-    editForm.classList.toggle("hide");
-    todoForm.classList.toggle("hide");
-    todoList.classList.toggle("hide");
-};
-
-const updateTodo = (text) => {
-
-    const todos = document.querySelectorAll(".todo")
-
-    todos.forEach((todo) => {
-
-        let todoTitle = todo.querySelector("h3")
-
-        if(todoTitle.innerText === oldInputValue) {
-            todoTitle.innerText = text
-        }
-    });
-};
-
-
-
-
 
 cancelEditBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -147,4 +125,4 @@ editForm.addEventListener("submit", (e) => {
     }
 
     toggleForms()
-}) */
+})
