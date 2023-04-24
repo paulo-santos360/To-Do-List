@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color: #333;
     box-sizing: border-box;
 }
 
@@ -10,7 +11,7 @@ body{
     background-image: url('../img/tarefa.jpg');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+   /*  background-repeat: no-repeat; */
 }
 
 button{
@@ -53,13 +54,13 @@ select{
 /* Todo header */
 .todo-container{
     max-width: 450px;
-    margin: 3rem auto 0;
+    margin: 3rem auto;
     background-color: #fdfdfd;
     padding: 1.5rem;
     border-radius: 15px;
 }
 
-.todo-container{
+.todo-container header{
     text-align: center;
     padding: 0 1rem 1rem;
     border-radius: 1px solid #ccc;
@@ -71,7 +72,7 @@ select{
     border-bottom: 1px solid #ccc;
 }
 
-#todo-form p,
+#todo-form,
 #edit-form p{
     margin-bottom: 0.5rem;
     font-weight: bold;
@@ -128,7 +129,7 @@ select{
     flex: 1;
 }
 
-/* Todo List */
+/*  Todo List  */
 .todo{
     display: flex;
     justify-content: space-around;
@@ -141,7 +142,7 @@ select{
 .todo h3{
     flex: 1;
     font-size: 0.9rem;
-    text-align: left;
+   /*  text-align: left; */
 }
 
 .todo button{
@@ -156,4 +157,4 @@ select{
     color: #fff;
     text-decoration: line-through;
     font-style: italic;
-}
+} 

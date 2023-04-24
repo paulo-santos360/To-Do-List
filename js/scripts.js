@@ -6,8 +6,6 @@ const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
-let oldInputValue;
-
 
 // Funções
 const saveTodo = (text) => {
@@ -16,10 +14,10 @@ const saveTodo = (text) => {
     todo.classList.add("todo");
 
     const todoTitle = document.createElement("h3");
-    todoList.innerText = text;
+    todoTitle.innerText = text;
     todo.appendChild(todoTitle);
 
-   // console.log(todo);
+   //console.log(todo);
 
    const doneBtn = document.createElement("button")
    doneBtn.classList.add("finish-todo")
@@ -38,29 +36,17 @@ const saveTodo = (text) => {
 
    todoList.appendChild(todo);
 
+   //Limpa depois que adiciona o campo
    todoInput.value = "";
-   todoInput.focus();
+   todoInput.focus();  
 };
 
-const toggleForms = () => {
-    editForm.classList.toggle("hide");
-    todoForm.classList.toggle("hide");
-    todoList.classList.toggle("hide");
-};
 
-const updateTodo = (text) => {
 
-    const todos = document.querySelectorAll(".todo")
 
-    todos.forEach((todo) => {
 
-        let todoTitle = todo.querySelector("h3")
 
-        if(todoTitle.innerText === oldInputValue) {
-            todoTitle.innerText = text
-        }
-    });
-};
+
 
 // Eventos
 todoForm.addEventListener("submit", (e) => {
@@ -68,14 +54,14 @@ todoForm.addEventListener("submit", (e) => {
 
    // console.log("Enviou form")
 
-   const inputValue = todoInput.value;
+    const inputValue = todoInput.value;
 
     // Vai Pegar o valor do input
    if(inputValue){
     //console.log(inputValue);
     // save todo
     saveTodo(inputValue);
-   }
+   } 
 });
 
 document.addEventListener("click", (e) => {
@@ -98,14 +84,51 @@ document.addEventListener("click", (e) => {
     }
 
     if(targetEl.classList.contains("edit-todo")){
-        toggleForms();
-       // console.log("Editou")
+        ///toggleForms();
+        console.log("Editou")
 
        editInput.value = todoTitle;
        oldInputValue = todoTitle;
        //Salvando a Variavel pra depois fazer alteração
     }
 })
+
+
+
+
+
+
+
+
+/* let oldInputValue;
+
+
+
+
+
+const toggleForms = () => {
+    editForm.classList.toggle("hide");
+    todoForm.classList.toggle("hide");
+    todoList.classList.toggle("hide");
+};
+
+const updateTodo = (text) => {
+
+    const todos = document.querySelectorAll(".todo")
+
+    todos.forEach((todo) => {
+
+        let todoTitle = todo.querySelector("h3")
+
+        if(todoTitle.innerText === oldInputValue) {
+            todoTitle.innerText = text
+        }
+    });
+};
+
+
+
+
 
 cancelEditBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -124,4 +147,4 @@ editForm.addEventListener("submit", (e) => {
     }
 
     toggleForms()
-})
+}) */
