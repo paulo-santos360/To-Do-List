@@ -158,3 +158,11 @@ select{
     text-decoration: line-through;
     font-style: italic;
 } 
+
+#filter{
+    display: none;
+}
+
+#toolbar{
+    display: none;
+}
