@@ -16,7 +16,7 @@ Este é um projeto simples de uma lista de tarefas (To-Do List) desenvolvido uti
 - **CSS3** 🎨: Estilização e aparência da aplicação.
 - **JavaScript** 💡: Implementação das funcionalidades interativas.
 
-# Vídeo Demonstrativo 🎥
+## Captura de Tela
 
 ![to-do-list](https://user-images.githubusercontent.com/102436341/235764442-938415dd-d9e7-4f6c-bbd4-ad3691726187.png)
 
